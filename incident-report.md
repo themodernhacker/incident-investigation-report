@@ -265,8 +265,17 @@ Rule-to-technique detail for the full ruleset:
 
 ### B. Evidence exhibits
 
+**Wazuh alert screenshots** (this run, source 172.19.0.1):
+
+![Brute-force burst detected, rule 100104 at level 10](evidence/screenshots/01-bruteforce-100104.png)
+
+![Account takeover, rule 100105 at level 12](evidence/screenshots/02-compromise-100105.png)
+
+![Post-compromise recon escalated to a page, rule 100151 at level 12](evidence/screenshots/03-recon-escalation-100151.png)
+
+**Other exhibits:**
+
 - [`evidence/timeline.md`](evidence/timeline.md), correlated event timeline.
 - [`evidence/raw-logs/cowrie-incident-2026-08-19.json`](evidence/raw-logs/cowrie-incident-2026-08-19.json),
   trimmed raw Cowrie events for this incident.
-- [`evidence/screenshots/`](evidence/screenshots/), Wazuh alert exhibits for this run.
 - [`iocs.md`](iocs.md), indicator reference.
