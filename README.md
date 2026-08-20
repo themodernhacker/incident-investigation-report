@@ -5,12 +5,14 @@ alerts fire. It takes a real, freshly captured intrusion against an SSH honeypot
 and writes it up as one unified incident, structured on the **NIST SP 800-61**
 incident-response lifecycle.
 
-This is the companion to [`honeypot-siem`](https://github.com/themodernhacker/honeypot-siem).
-That project is the detection-engineering half: it builds, tunes, and tests the
-Wazuh rules. **This** project is the other half of the SOC job: it consumes the
-alerts those rules produce and turns them into an investigation a shift lead,
-manager, or auditor could read and trust. Same lab, same rules, different
-deliverable.
+This is the **investigation** stage of a three-project SOC workflow:
+[`honeypot-siem`](https://github.com/themodernhacker/honeypot-siem) builds and
+tunes the **detections**;
+[`soar-triage`](https://github.com/themodernhacker/soar-triage) is the
+**automated first-response** that enriches and tickets each alert the instant it
+fires; and **this** project is the **human investigation** an analyst writes for
+the tickets that warrant a closer look, one a shift lead, manager, or auditor
+could read and trust. Detection to automated triage to investigation, same lab.
 
 > **Lab framing, stated honestly:** the target `web-prod-01` is a Cowrie SSH
 > honeypot and the attack was a controlled purple-team run on my own machine, so
